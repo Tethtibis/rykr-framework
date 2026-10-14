@@ -60,6 +60,21 @@
     ],
     "passed": true
   },
+  "rykr_dial.py": {
+    "sha256": "62ac999db098eca62c13f73f11059a88d6af8fb860d102ca62ab03a2e0433d64",
+    "imports": [
+      "argparse",
+      "curses",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "passed": true
+  },
   "rykr_memory.py": {
     "sha256": "b8f778fa9b747f023658118593cb655dc0f8f1dfd71a75125e40510311ff8011",
     "imports": [
@@ -109,6 +124,20 @@
       "subprocess",
       "sys",
       "time"
+    ],
+    "passed": true
+  },
+  "rykr_wol.py": {
+    "sha256": "1c6b99def04087f2cac1d46854eddde5790cc2cae49b5cb6a045b9358213e076",
+    "imports": [
+      "argparse",
+      "json",
+      "os",
+      "re",
+      "socket",
+      "struct",
+      "sys",
+      "typing"
     ],
     "passed": true
   }

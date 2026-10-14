@@ -50,6 +50,9 @@ All modules live in [`blueprints/`](blueprints/) and can be run or pulled direct
 | **`rykr_scene.py`** | 3D Spatial Cartesian Geometry Assembler | CLI flags $\to$ SceneGraph JSON Contract |
 | **`rykr_blit.py`** | 30° Axonometric Braille Virtual Framebuffer | `stdin` (JSON) $\to$ `stdout` (Braille Buffer) |
 | **`rykr_demo.py`** | Real-Time 3D Rotating Wireframe Engine (30 FPS) | CLI $\to$ Real-Time Terminal Animation |
+| **`rykr_wol.py`** | Zero-Dependency Wake-on-LAN Magic Packet Broadcaster | CLI flags $\to$ UDP Broadcast / JSON Telemetry |
+| **`rykr_dial.py`** | Interactive Curses TUI Speed-Dial & SSH Dispatcher | JSON ledger $\to$ Full-Screen Curses TUI |
+
 
 ---
 
