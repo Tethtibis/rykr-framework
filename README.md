@@ -52,6 +52,8 @@ All modules live in [`blueprints/`](blueprints/) and can be run or pulled direct
 | **`rykr_demo.py`** | Real-Time 3D Rotating Wireframe Engine (30 FPS) | CLI $\to$ Real-Time Terminal Animation |
 | **`rykr_wol.py`** | Zero-Dependency Wake-on-LAN Magic Packet Broadcaster | CLI flags $\to$ UDP Broadcast / JSON Telemetry |
 | **`rykr_dial.py`** | Interactive Curses TUI Speed-Dial & SSH Dispatcher | JSON ledger $\to$ Full-Screen Curses TUI |
+| **`rykr_linkrunner.py`** | Physical Switchport Link & LLDP/CDP Inspector | CLI flags $\to$ Switchport JSON Telemetry |
+
 
 
 ---
