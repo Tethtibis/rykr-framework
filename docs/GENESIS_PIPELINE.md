@@ -1,10 +1,10 @@
 # The Genesis Pipeline: Developer Guide
 
-The Genesis Pipeline is a mandatory 3-stage state machine that governs all software construction inside the Rykr Framework. It was engineered to mathematically prevent "prompt thrashing"—the cycle where an AI generates unvetted code, encounters runtime errors, pastes patches on top of patches, and collapses the active context window.
+The Genesis Pipeline is a mandatory 4-stage state machine that governs all software construction inside the Rykr Framework. It was engineered to mathematically prevent "prompt thrashing"—the cycle where an AI generates unvetted code, encounters runtime errors, pastes patches on top of patches, and collapses the active context window.
 
 ---
 
-## The Three Phases
+## The Four Phases
 
 ### Phase 1: Skeleton & Map (`~plan`)
 * **Objective:** Establish the macro blueprint before writing a single line of logic.
@@ -34,3 +34,15 @@ The Genesis Pipeline is a mandatory 3-stage state machine that governs all softw
   * **Anti-Creep Failsafe:** All lateral ideas or "nice-to-have" features introduced during construction are rejected and appended to `backlog.md`.
   * **Local Test Mandate:** The active module must compile, run, and pass automated unit tests before the next module begins.
   * **Cognitive Failsafe:** If unexpected errors clutter the context buffer, trigger a `[MEM_COMMIT]` to clear conversational debris and reload only the pristine module blueprint.
+
+### Phase 4: Crystallization (`~crystallize` / `~harvest`)
+* **Objective:** Post-execution harvesting and precision pruning. Eliminate "tool bloat" by subjecting completed logic to deterministic quality gates before promoting it to global toolsets.
+* **The Triad Pruning Filter:**
+  1. **Gate 1: Generality & Decoupling:** Does the module solve a generic, recurring architectural pattern, or is it a bespoke, single-use patch?
+  2. **Gate 2: Zero-Pip Standard:** Does the code pass AST verification with 100% Python standard library purity or pure POSIX shell, without external runtime dependencies?
+  3. **Gate 3: Context ROI Ratio:** Does carrying this tool in active prompt payloads save more cognitive bandwidth and compute than the token tax of loading it?
+* **Outcomes:**
+  * **PRUNED:** Logic failing any gate remains isolated inside its local `projects/<name>` directory and is summarized only in the T2 Archive log. No permanent buttons or blueprints are generated.
+  * **PROMOTED:** Passing modules are crystallized as zero-pip modules in `Blueprint_Library/`, registered in `rykr-cmd`, and recorded in `rykr_skills.md`.
+* **State Lock:** The AI must output a binary audit receipt (`PROMOTED` vs. `PRUNED`) before calling `~commit`.
+

@@ -102,16 +102,16 @@ Stores the physical topology of the local network, hostnames, hardware specs, pr
 
 Most developers interact with code-generation AI in a chaotic loop: they type a prompt, the model spits out fifty lines of unvetted code, something breaks, the developer pastes the error back in, and the model guesses again. This is prompt thrashing, and it guarantees technical debt.
 
-Rykr enforces a rigid three-stage state machine for every objective:
+Rykr enforces a rigid four-stage state machine for every objective:
 
 ```
-┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐
-│   PHASE 1: SKELETON    │ ---> │  PHASE 2: ADVERSARIAL   │ ---> │  PHASE 3: MODULAR      │
-│        (~plan)         │      │     AUDIT (~redteam)   │      │   EXECUTION (~execute) │
-└────────────────────────┘      └────────────────────────┘      └────────────────────────┘
-  • ZERO code generation          • Hunt for entropy & edge cases  • Build ONE pipe at a time
-  • Map I/O contracts             • Stress-test assumptions        • Pass local tests
-  • Require Operator sign-off     • Resolve flaws before building  • Reject lateral scope creep
+┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐
+│   PHASE 1: SKELETON    │ ---> │  PHASE 2: ADVERSARIAL   │ ---> │  PHASE 3: MODULAR      │ ---> │  PHASE 4: CRYSTALLIZE  │
+│        (~plan)         │      │     AUDIT (~redteam)   │      │   EXECUTION (~execute) │      │      (~crystallize)    │
+└────────────────────────┘      └────────────────────────┘      └────────────────────────┘      └────────────────────────┘
+  • ZERO code generation          • Hunt for entropy & edge cases  • Build ONE pipe at a time      • Triad Pruning Filter
+  • Map I/O contracts             • Stress-test assumptions        • Pass local tests              • Promote vs. Prune
+  • Require Operator sign-off     • Resolve flaws before building  • Reject lateral scope creep    • Zero-Pip AST Guarantee
 ```
 
 1. **Phase 1: Skeleton & Map (`~plan`)**  
@@ -120,6 +120,9 @@ Rykr enforces a rigid three-stage state machine for every objective:
    The model switches personas to "Devil's Advocate." It aggressively attacks its own Phase 1 blueprint, hunting for race conditions, security holes, cloud storage latency traps, and unneeded complexity. Flaws must be resolved before proceeding.
 3. **Phase 3: Modular Execution (`~execute`)**  
    Construction begins under strict UNIX pipe philosophy. We build **one isolated module at a time**. Each module must compile and pass deterministic automated unit tests before the next module is started. Any stray ideas or feature creep introduced during this phase are immediately rejected and logged to a `backlog.md` file.
+4. **Phase 4: Crystallization (`~crystallize` / `~harvest`)**  
+   Once execution passes, the model executes a mandatory **Triad Pruning Audit** before any commit. It evaluates generality (is it an abstract class of problems?), Zero-Pip compliance (is it 100% standard library pure?), and Context ROI (does the tool save more bandwidth than its token tax?). Single-use or messy code is pruned to the local workspace and memory log; only pristine, high-yield tools crystallize into the public Blueprint Library.
+
 
 ---
 

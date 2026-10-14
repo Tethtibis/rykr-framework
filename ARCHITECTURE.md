@@ -50,7 +50,7 @@ To prevent corruption from sudden disconnections or kernel crashes, Tier 2 commi
 
 ## 2. The Genesis Pipeline State Machine
 
-To enforce modularity and eliminate hallucinated "prompt thrashing," all software development inside Rykr must advance through a three-stage deterministic state machine:
+To enforce modularity and eliminate hallucinated "prompt thrashing," all software development inside Rykr must advance through a four-stage deterministic state machine:
 
 ```
                       [ NEW OBJECTIVE INGESTED ]
@@ -84,7 +84,23 @@ To enforce modularity and eliminate hallucinated "prompt thrashing," all softwar
                        Automated deterministic tests
                                   │
                                   ▼
-                    [ LOCAL VALIDATION PASSES ]
+                    ┌───────────────────────────┐
+                    │   PHASE 4: CRYSTALLIZE    │
+                    │ (~crystallize / ~harvest) │
+                    └─────────────┬─────────────┘
+                                  │
+                       [ TRIAD PRUNING FILTER ]
+                       Gate 1: Generality / Class
+                       Gate 2: Zero-Pip / AST Pure
+                       Gate 3: Context ROI Ratio
+                                  │
+                     ┌────────────┴────────────┐
+                     ▼                         ▼
+               [ PASS: PROMOTE ]         [ FAIL: PRUNE ]
+            Stage Blueprint Library      Retain in local workspace
+            Link to rykr-cmd             Archive to T2 memory only
+                     │                         │
+                     └────────────┬────────────┘
                                   │
                                   ▼
                     [ COMMIT TO T2 ARCHIVE & SYNC ]
@@ -93,6 +109,8 @@ To enforce modularity and eliminate hallucinated "prompt thrashing," all softwar
 ### Anti-Creep & Cognitive Failsafes
 * **Anti-Creep Failsafe:** Any secondary ideas or feature enhancements suggested during Phase 3 are immediately rejected and pushed to `backlog.md` until the current active module passes local tests.
 * **Cognitive Failsafe:** If a module requires excessive troubleshooting that clutters the Tier 1 buffer, an autonomous `[MEM_COMMIT]` is triggered to clear conversational debris and reload only the pristine module blueprint.
+* **Precision Pruning Failsafe:** In Phase 4, ad-hoc or bespoke code is barred from polluting the global toolchain. Only modules meeting all three gates are promoted to the Blueprint Library.
+
 
 ---
 
