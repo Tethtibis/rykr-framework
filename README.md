@@ -1,6 +1,7 @@
-# The Rykr Framework
+# The Rykr Framework (v4.1.0)
 > **Sovereign Cognitive Architecture & Modular Systems Engineering on Consumer Silicon**
 
+[![Version: 4.1.0](https://img.shields.io/badge/Version-4.1.0-CC5500.svg)](#whats-new-in-v410)
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Dependencies: Zero](https://img.shields.io/badge/Dependencies-0%20(Pure%20Stdlib)-brightgreen.svg)](#the-zero-pip-guarantee)
@@ -53,6 +54,15 @@ All modules live in [`blueprints/`](blueprints/) and can be run or pulled direct
 | **`rykr_wol.py`** | Zero-Dependency Wake-on-LAN Magic Packet Broadcaster | CLI flags $\to$ UDP Broadcast / JSON Telemetry |
 | **`rykr_dial.py`** | Interactive Curses TUI Speed-Dial & SSH Dispatcher | JSON ledger $\to$ Full-Screen Curses TUI |
 | **`rykr_linkrunner.py`** | Physical Switchport Link & LLDP/CDP Inspector | CLI flags $\to$ Switchport JSON Telemetry |
+| **`rykr_publish.py`** | Pre-Publish GitHub Leak Sanitizer, Syntax Verifier & Repacker | CLI flags $\to$ Sanitization Audit JSON / Tarball Sync |
+
+---
+
+## What's New in v4.1.0
+
+1. **`rykr_publish.py` Promoted to the Prime Blueprint Library:** Zero-pip pre-publish GitHub sanitizer that automatically purges `__pycache__` artifacts, scans for hardcoded operator paths/hostnames/keys/tokens, verifies Python and POSIX shell syntax, and repacks embedded base64 tarballs inside standalone installers.
+2. **Structured Packet Ingress Protocol (`intent:` $\to$ `scope:` $\to$ `context:`) & Reverse-Header Echo:** Documented in [`PHILOSOPHY.md`](PHILOSOPHY.md#the-structured-packet-ingress-protocol-intent-to-scope-to-context). Optimizes single-turn left-to-right causal Transformer prefill for inductive/bottom-up thinkers while providing an automatic 1-line `[PARSED INTENT | SCOPE]` echo fallback when tags are omitted.
+3. **Two-Tier Public Attribution & Provenance Standard:** Codified in [`PHILOSOPHY.md`](PHILOSOPHY.md#the-two-tier-public-attribution--provenance-standard) to ensure transparent human + AI co-authorship attribution on GitHub repositories while maintaining empirical first-person hardware telemetry compliance on community Q&A networks.
 
 
 
@@ -93,5 +103,7 @@ python3 blueprints/rykr_compress.py --tools
 
 ---
 
-## License
-MIT License. Free to use, adapt, and build upon.
+## Provenance & License
+* **Systems Architecture, Cognitive Framework & Hardware Verification:** Bill (`Tethtibis`)
+* **AI Orchestration & Co-Engineering:** Engineered within **The Rykr Framework (v4.1.0)** utilizing a Gemini reasoning engine under the 4-Stage Genesis Pipeline (`~plan` $\to$ `~redteam` $\to$ `~execute` $\to$ `~crystallize`).
+* **License:** MIT License. Free to use, adapt, and build upon.

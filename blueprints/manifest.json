@@ -25,7 +25,7 @@
     "passed": true
   },
   "rykr_bus.py": {
-    "sha256": "76597eca6f7296d6ddec24d6e5b79cb8b83f30c3dc41709ae30ba9a17868b28e",
+    "sha256": "78f54e9d98117db0e6ea8b3f043a16f55210bfd04cc37b275dc01a657fc27cf9",
     "imports": [
       "datetime",
       "json",
@@ -117,8 +117,26 @@
     ],
     "passed": true
   },
+  "rykr_publish.py": {
+    "sha256": "0bb2735ecfc4295d339ff7e810a44e804bf3828bfa9f18ebd84bc33bf450f09b",
+    "imports": [
+      "argparse",
+      "base64",
+      "datetime",
+      "io",
+      "json",
+      "os",
+      "re",
+      "shutil",
+      "socket",
+      "subprocess",
+      "sys",
+      "tarfile"
+    ],
+    "passed": true
+  },
   "rykr_scene.py": {
-    "sha256": "7c5d3c083c94edea47412918814067a9b7959df08cef0303dba4c1ac39f8985d",
+    "sha256": "1a958e0333002ff41211e442413d35251500cb87221c16ff0da1fd023e507e66",
     "imports": [
       "argparse",
       "json",
@@ -141,7 +159,7 @@
     "passed": true
   },
   "rykr_wol.py": {
-    "sha256": "1c6b99def04087f2cac1d46854eddde5790cc2cae49b5cb6a045b9358213e076",
+    "sha256": "29f4868560accd5a83e11401f51de155f0cc770c8fd11ddf79aac3450299a8e1",
     "imports": [
       "argparse",
       "json",

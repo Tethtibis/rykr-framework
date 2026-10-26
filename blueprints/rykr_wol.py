@@ -25,11 +25,11 @@ from typing import Dict, Any, Optional
 
 VERSION = "1.0.0"
 
-# Default hardware presets for Fhawx Network
+# Default hardware presets (can be overridden via ~/.config/rykr/wol_presets.json)
 HARDWARE_PRESETS = {
-    "necrobeast": "E8:9C:25:C5:30:AF",
-    "necro": "E8:9C:25:C5:30:AF",
-    "fhawx-kit": "00:E0:4C:68:01:23"
+    "gpu-worker": "00:11:22:33:44:55",
+    "compute-node": "00:11:22:33:44:56",
+    "client-rig": "00:E0:4C:68:01:23"
 }
 
 

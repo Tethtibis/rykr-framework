@@ -156,6 +156,7 @@ We replaced them with the **Push-Button Modular Console**: a set of native termi
 * `rykr-session`: Detached tmux daemon lifecycle governor.
 * `rykr-memory`: Atomic append committer for the T2 markdown ledger.
 * `rykr-compress`: Decoupled RRS (Rykr Reduced Signature) prompt compressor. It strips bloated JSON schemas and reduces tool prompt tokens by **72.8%**, eliminating JSON escaping errors.
+* `rykr-publish`: Automated GitHub pre-publish sanitizer, PII/hostname leak scanner, Python/POSIX syntax verifier, and embedded base64 payload repacker.
 * `rykr-blueprint`: Local package manager to pull, install, and audit standard-library blueprints without touching external package repositories.
 
 ### Visualizing 3D in Pure Text
@@ -180,6 +181,6 @@ If you take nothing else away from the Rykr Framework, remember these core engin
 The Rykr Framework was built by people who needed real solutions on real hardware. It was refined across months of daily use, proven in adversarial testing, and frozen into code that will run as cleanly tomorrow as it does today.
 
 ---
-*Authored on Fhawx-Server (`RYKR-PRIME`).*  
+*Authored on the Rykr Prime Node (`RYKR-PRIME` — Core v4.1.0).*  
 *Standard Library Reference: Python 3.10+.*  
 *License: MIT.*

@@ -31,12 +31,12 @@ class CircuitBreakerTripped(Exception):
 
 
 def get_origin_node():
-    """Detect local hostname or default to fhawx-server."""
+    """Detect local hostname or default to rykr-prime."""
     try:
         import socket
         return socket.gethostname()
     except Exception:
-        return "fhawx-server"
+        return "rykr-prime"
 
 
 def format_iso_timestamp():

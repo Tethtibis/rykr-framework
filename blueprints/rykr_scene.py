@@ -71,7 +71,7 @@ def build_preset_scene(preset_name: str) -> Dict[str, Any]:
     scene = create_empty_scene()
     p = preset_name.lower().strip()
 
-    if p in ("necrobeast", "sat", "satellite"):
+    if p in ("gpu-worker", "sat", "satellite"):
         # 3-Tier Sovereign Satellite Stack
         scene["nodes"] = [
             {
@@ -186,7 +186,7 @@ def build_preset_scene(preset_name: str) -> Dict[str, Any]:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Rykr-Scene: Spatial Geometry Assembler")
-    parser.add_argument("--preset", type=str, help="Load a pre-configured architecture (necrobeast, satisfactory, default)")
+    parser.add_argument("--preset", type=str, help="Load a pre-configured architecture (satellite, satisfactory, default)")
     parser.add_argument("--floor", action="append", help="Define a horizontal floor plane: 'Z:Name:Label' (repeatable)")
     parser.add_argument("--lift", action="append", help="Connect two floors vertically: 'FromID->ToID:Label' (repeatable)")
     return parser.parse_args()
