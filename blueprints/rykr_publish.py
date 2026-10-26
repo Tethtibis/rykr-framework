@@ -144,9 +144,11 @@ def audit_repo(repo_dir, as_json=False):
                 if res.returncode != 0:
                     syntax_errors.append({"file": relpath, "error": res.stderr.strip()})
             elif ext == ".py" or ("python" in first_line and first_line.startswith("#!")):
-                res = subprocess.run([sys.executable, "-m", "py_compile", fpath], capture_output=True, text=True)
+                res = subprocess.run([sys.executable, "-B", "-m", "py_compile", fpath], capture_output=True, text=True)
                 if res.returncode != 0:
                     syntax_errors.append({"file": relpath, "error": res.stderr.strip()})
+
+    purged.extend(purge_pycache(repo_dir))
 
     data = {
         "repo": repo_dir,
