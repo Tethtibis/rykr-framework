@@ -37,6 +37,21 @@
     ],
     "passed": true
   },
+  "rykr_canvas.py": {
+    "sha256": "1bac60246654bdd16320a28760d1e005efeb843e1ddaed5efcad287143f30e28",
+    "imports": [
+      "argparse",
+      "datetime",
+      "html",
+      "json",
+      "os",
+      "re",
+      "socket",
+      "subprocess",
+      "sys"
+    ],
+    "passed": true
+  },
   "rykr_compress.py": {
     "sha256": "8a72d214eb86f7508cdf3a8149c38063d2afdcaae54949c825aa3d0b01a42ac6",
     "imports": [
@@ -118,7 +133,7 @@
     "passed": true
   },
   "rykr_publish.py": {
-    "sha256": "ba0569b883759dd7ff5b09438b63f1752936ebeafcd14880b1a7e6119ee524b8",
+    "sha256": "d09d360a8983a5c5de0201d4ef95943644aa5c5d033be90a034ad5ef32cb1b1f",
     "imports": [
       "argparse",
       "base64",

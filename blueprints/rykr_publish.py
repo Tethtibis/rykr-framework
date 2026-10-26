@@ -32,6 +32,8 @@ def build_forbidden_patterns():
         (re.escape(home_dir), f"Hardcoded current operator home path ({home_dir})"),
         (r"BEGIN (OPENSSH|RSA|EC) PRIVATE KEY", "Private cryptographic key material"),
         (r"\b(ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})\b", "GitHub personal access token"),
+        (r"\bAIza[0-9A-Za-z\-_]{35}\b", "Google Cloud / Gemini API key leak"),
+        (r"\bsk-[0-9A-Za-z]{20,}\b", "OpenAI / LLM provider secret key leak"),
     ]
     if hostname and hostname.lower() not in ("localhost", "ubuntu", "debian"):
         patterns.append((rf"\b{re.escape(hostname)}\b", f"Local host identifier leak ({hostname})"))

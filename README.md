@@ -55,6 +55,7 @@ All modules live in [`blueprints/`](blueprints/) and can be run or pulled direct
 | **`rykr_dial.py`** | Interactive Curses TUI Speed-Dial & SSH Dispatcher | JSON ledger $\to$ Full-Screen Curses TUI |
 | **`rykr_linkrunner.py`** | Physical Switchport Link & LLDP/CDP Inspector | CLI flags $\to$ Switchport JSON Telemetry |
 | **`rykr_publish.py`** | Pre-Publish GitHub Leak Sanitizer, Syntax Verifier & Repacker | CLI flags $\to$ Sanitization Audit JSON / Tarball Sync |
+| **`rykr_canvas.py`** | Push-Open HTML5 + Mathematical Vector `<svg>` & Clipboard Appliance | JSON Spec $\to$ Burnt Orange HTML5/SVG + Active Client Launch |
 
 ---
 
